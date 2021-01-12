@@ -1,5 +1,6 @@
 package Third;
 
+import java.util.Random;
 
 class Tablet extends Medicine{
 	void displayLabel() {
@@ -28,6 +29,9 @@ public class Medicine {
 	void displayLabel() {
 		System.out.println("Company name: " + this.name + " Address " + this.address);
 	}
+	void setname(String name) {
+		this.name = name;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -35,11 +39,13 @@ public class Medicine {
 		int randint = 0;
 		for(int i=0;i<10;i++) {
 			randint = 0;
+			Random rand = new Random(); 
 			while ((randint<1) || (randint>3))
 
 			{
 
-			randint = (int) (Math.random() *3 + 1);
+				//randint = (int) (Math.random() *3 + 1);
+				randint = rand.nextInt(4);
 
 			}
 			switch(randint) {
@@ -57,8 +63,11 @@ public class Medicine {
 			}
 			
 			}
+			
 			System.out.println("Object " + i+1);
-			a[i].displayLabel();		}
+			a[i].setname("Mohit" + i+1);
+			a[i].displayLabel();
+			}
 	}
 
 }

@@ -23,7 +23,7 @@ class Syrup extends Medicine{
 	}
 }
 
-public class Medicine {
+ class Medicine {
 	private String name = "Mahavir Pharma";
 	private String address = "Narayangaon";
 	void displayLabel() {
@@ -33,6 +33,11 @@ public class Medicine {
 		this.name = name;
 	}
 
+
+
+}
+
+public class TestMedicine{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Medicine[] a = new Medicine[10];
@@ -69,5 +74,4 @@ public class Medicine {
 			a[i].displayLabel();
 			}
 	}
-
 }

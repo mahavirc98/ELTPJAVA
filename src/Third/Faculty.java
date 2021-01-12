@@ -43,7 +43,8 @@ interface Salaried{
 	
 }
 
-class Faculty extends Student implements Temporary,Salaried{
+
+class Faculty extends Person{
 	String dept;
 	void setDept(String dept) {
 		this.dept = dept;
@@ -51,10 +52,24 @@ class Faculty extends Student implements Temporary,Salaried{
 	}
 }
 
+
 class UnderGradFaculty extends Faculty{
+	
+}
+class TUnderGradFaculty extends UnderGradFaculty implements Temporary{
+	
+}
+class SUnderGradFaculty extends UnderGradFaculty implements Salaried{
 	
 }
 
 class GradFaculty extends Faculty{
+	
+}
+
+class TGradFaculty extends UnderGradFaculty implements Temporary{
+	
+}
+class SGradFaculty extends UnderGradFaculty implements Salaried{
 	
 }
